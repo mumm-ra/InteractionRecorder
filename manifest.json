@@ -1,0 +1,20 @@
+{
+  "name": "Record interaction",
+  "description": "Record an interaction for testing.",
+  "version": "0.1",
+  "minimum_chrome_version": "16.0.884",
+  "permissions": [
+    "tabs", "http://*/*", "https://*/*"
+  ],
+  "browser_action": { 
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],      
+      "js": ["jquery-1.9.1.min.js", "record.js"]
+    }
+  ],
+  "background":{"scripts":["background.js"]},
+  "manifest_version": 2
+}
